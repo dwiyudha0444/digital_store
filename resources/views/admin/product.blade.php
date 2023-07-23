@@ -60,33 +60,37 @@
 
                         <!-- /.card-header -->
                         <div class="card-body">
-                          <table id="example1" class="table table-bordered table-striped ">
-                              <thead>
-                                  <tr>
-                                      <th>Nama</th>
-                                      <th>Jenis</th>
-                                      <th>Harga</th>
-                                      <th>Action</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                      <td>Data 1</td>
-                                      <td>Data 2</td>
-                                      <td>Data 3</td>
-                                      <td>
-                                        <div class="d-flex justify-content-between">
-                                          <button type="button" class="btn btn-block bg-gradient-success ">Edit</button>
-                                          <button type="button" class="btn btn-block bg-gradient-success ">Edit</button>
-                                        </div>
+                            <table id="example1" class="table table-bordered table-striped ">
+                                <thead>
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>Jenis</th>
+                                        <th>Harga</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Data 1</td>
+                                        <td>Data 2</td>
+                                        <td>Data 3</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <button type="button"
+                                                    class="btn btn-block bg-gradient-success d-none">Edit</button>
+                                                <button type="button"
+                                                    class="btn btn-block bg-gradient-success ">Edit</button>
+                                                <button type="button"
+                                                    class="btn btn-block bg-gradient-success ">Edit</button>
+                                            </div>
                                         </td>
-                                  
-                                  </tr>
-                                  <!-- Add more rows as needed -->
-                              </tbody>
-                          </table>
-                      </div>
-                      
+
+                                    </tr>
+                                    <!-- Add more rows as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
