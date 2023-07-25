@@ -63,14 +63,17 @@
                             <table id="example1" class="table table-bordered table-striped ">
                                 <thead>
                                     <tr>
+                                        <th>No</th>
                                         <th>Nama</th>
                                         <th>Jenis</th>
                                         <th>Harga</th>
+                                        <th>Foto</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td></td>
                                         <td>Data 1</td>
                                         <td>Data 2</td>
                                         <td>Data 3</td>
@@ -80,8 +83,9 @@
                                                     class="btn btn-block bg-gradient-success d-none">Edit</button>
                                                 <button type="button"
                                                     class="btn btn-block bg-gradient-success ">Edit</button>
+                                                    &nbsp;&nbsp;
                                                 <button type="button"
-                                                    class="btn btn-block bg-gradient-success ">Edit</button>
+                                                    class="btn btn-block bg-gradient-danger ">Hapus</button>
                                             </div>
                                         </td>
 
