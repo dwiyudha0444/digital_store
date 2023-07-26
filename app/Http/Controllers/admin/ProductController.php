@@ -39,7 +39,8 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $pro = Product::find($id);
+        return view('admin.product.detail',compact('pro'));
     }
 
     /**
@@ -47,7 +48,8 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $pro = Product::find($id);
+        return view('admin.product.edit',compact('pro'));
     }
 
     /**

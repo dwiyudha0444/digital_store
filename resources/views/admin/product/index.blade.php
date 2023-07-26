@@ -85,15 +85,6 @@
                                                 <td class="text-center">{{ $pro->harga }}</td>
                                                 <td class="text-center">{{ $pro->foto }}</td>
                                                 <td class="d-flex justify-content-between>
-                                                    {{-- <div class="d-flex justify-content-between">
-                                                        <button type="button"
-                                                            class="btn btn-block bg-gradient-success d-none">Edit</button>
-                                                        <button type="button"
-                                                            class="btn btn-block bg-gradient-success ">Edit</button>
-                                                        &nbsp;&nbsp;
-                                                        <button type="button"
-                                                            class="btn btn-block bg-gradient-danger ">Hapus</button>
-                                                    </div> --}}
                                                     <form method="POST"
                                                     action="{{ route('product.destroy', $pro->id) }}">
                                                     @csrf
@@ -104,7 +95,10 @@
                                                     <button type="button"
                                                         class="btn btn-block bg-gradient-success d-none">Edit</button>
 
-                                                    <a class="btn btn-block bg-gradient-success" href="">Edit
+                                                    <a class="btn btn-block bg-gradient-primary" href="{{ route('product.show',$pro->id) }}">Detail
+                                                    </a>
+                                                    &nbsp;&nbsp;
+                                                    <a class="btn btn-block bg-gradient-success" href="{{ url('product-edit',$pro->id) }}">Edit
                                                     </a>
                                                     &nbsp;&nbsp;
                                                     <button type="submit"
