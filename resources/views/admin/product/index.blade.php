@@ -30,21 +30,20 @@
                         <div class="card">
                             <div class="card-header mt-3">
                                 <div class="row">
-                                    <div class="col-3">
-                                        <button type="button" class="btn btn-block bg-primary">Tambah</button>
+                                    <div class="col-7"> <!-- Adjusted the column size to take 9 columns -->
+                                        <a href="{{ route('product.create')}}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" title="Tambah Data Film" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                                            <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+                                           </svg></a>
                                     </div>
-                                    <div class="col-3">
-
-                                    </div>
-                                    <div class="col-5">
+                                    <div class="col-5"> <!-- Adjusted the column size to take 3 columns -->
                                         <section class="content">
                                             <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col-md-8 offset-md-6">
+                                                    <div class="col-md-8 offset-md-4"> <!-- Adjusted the column size and offset -->
                                                         <form action="simple-results.html">
                                                             <div class="input-group">
-                                                                <input type="search" class="form-control form-control-lg"
-                                                                    placeholder="Type your keywords here">
+                                                                <input type="search" class="form-control form-control-lg" placeholder="Cari">
                                                                 <div class="input-group-append">
                                                                     <button type="submit" class="btn btn-lg btn-default">
                                                                         <i class="fa fa-search"></i>
@@ -58,6 +57,7 @@
                                         </section>
                                     </div>
                                 </div>
+                                
                             </div>
 
                             <!-- /.card-header -->
@@ -89,9 +89,6 @@
                                                     action="{{ route('product.destroy', $pro->id) }}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    {{-- <a class="btn btn-info btn-sm" title="Detail Film" href="{{ route('film.show',$fil->id) }}">
-                                                        <i class="bi bi-eye"></i>
-                                                      </a> --}}
                                                     <button type="button"
                                                         class="btn btn-block bg-gradient-success d-none">Edit</button>
 
