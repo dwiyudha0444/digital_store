@@ -7,7 +7,7 @@
       </div>
     
       <!-- Navbar -->
-      <nav class="main-header navbar navbar-expand navbar-dark">
+      <nav class="main-header navbar navbar-expand">
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
