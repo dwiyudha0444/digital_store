@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('product', function (Blueprint $table) {
+        Schema::create('checkout', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('jenis');
+            $table->string('nama');
+            $table->string('no_wa');
             $table->string('harga');
-            $table->string('foto');
+            $table->enum('status', ['pending', 'paid'])->default('pending');
             $table->timestamps();
         });
+        DB::table('checkout')->update(['status' => 'pending']);
     }
 
     /**
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('checkout');
     }
 };
