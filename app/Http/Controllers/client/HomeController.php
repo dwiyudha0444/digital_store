@@ -4,6 +4,8 @@ namespace App\Http\Controllers\client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Product;
+use DB;
 
 class HomeController extends Controller
 {
@@ -12,7 +14,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('client.index');
+        $product = Product::orderBy('id','DESC')->get();
+        return view('client.index',compact('product'));
     }
 
     /**

@@ -40,7 +40,7 @@ class ProductController extends Controller
             //Product::create($request->all());
             //---aoakah user ingin upload foto
             if(!empty($request->foto)){
-                $fileName=$request->jenis.'.'.$request->foto->extension();
+                $fileName=$request->name.'.'.$request->foto->extension();
                 //$fileName=$request->foto->getClientOriginalName();
                 $request->foto->move(public_path('admin/foto/product'),$fileName);
             }
@@ -86,7 +86,42 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255',
+            'jenis' => 'required|max:45',
+            'harga' => 'required',
+            'foto' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg'
+            ]);
+            //Film::create($request->all());
+            //---ambil foto lama
+            $foto = DB::table('product')->select('foto')->where('id',$id)->get();
+            foreach($foto as $co){
+                $namaFileFotoLama = $co->foto;
+            }
+            //---aoakah user ingin ganti foto lama
+            if(!empty($request->foto)){
+                //jika ada foto lama , hapus terlebih dahulu
+                if(!empty($fil->foto)) unlink('admin/foto/product'.$fil->foto);
+                //foto lama ganti foto baru
+                $fileName=$request->name.'.'.$request->foto->extension();
+                //$fileName=$request->foto->getClientOriginalName();
+                $request->foto->move(public_path('admin/foto/product'),$fileName);
+            }
+            //---user tidak ganti foto lama
+            else{
+                $fileName = $namaFileFotoLama;
+            }
+            DB::table('product')->where('id',$id)->update(
+                [
+                    'name' => $request->name,
+                    'jenis' => $request->jenis,
+                    'harga' => $request->harga,
+                    'foto' => $fileName,
+                    'updated_at' => now(),
+              ]);
+            
+            return redirect('/product'.'/'.$id)
+            ->with('success','Data Berhasil Diubah');
     }
 
     /**

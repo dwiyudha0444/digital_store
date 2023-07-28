@@ -30,5 +30,28 @@
     - preload images
   -->
 </head>
+<style>
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Mengulang kolom sebanyak 4 kali dengan lebar yang sama */
+  grid-gap: 10px; /* Jarak antara produk */
+  max-width: 1200px; /* Lebar container maksimum */
+  margin: 0 auto; /* Pusatkan container */
+  justify-items: center; /* Menengahkan item secara horizontal */
+}
 
+.product-item {
+  width: 100%; /* Setiap produk mengisi lebar kolom sepenuhnya */
+  /* (Tambahkan properti CSS lainnya sesuai kebutuhan) */
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 767px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr); /* Tampilan 2x2 pada perangkat mobile */
+    align-items: center; /* Menengahkan item secara vertikal pada perangkat mobile */
+  }
+}
+
+</style>
 <body id="top">

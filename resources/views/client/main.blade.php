@@ -50,125 +50,50 @@
             strategic
           </p>
 
-          <ul class="has-scrollgrid">
 
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
-                  <img src="./assets/images/shop-img-1.jpg" width="300" height="260" loading="lazy"
-                    alt="Women Black T-Shirt" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="#" class="card-badge skewBg">Website</a>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Website TopUp</a>
-                  </h3>
-
-                  <div class="card-wrapper">
-                    <p class="card-price">$29.00</p>
-
-                    <button class="card-btn">
-                      <ion-icon name="basket"></ion-icon>
-                    </button>
-                  </div>
-
-                </div>
-
+          <div class="product-container">
+            @foreach ($product as $pro)
+              <div class="product-item">
+                <ul class="has-scrollgrid">
+                  <li class="scrollbar-item">
+                    <div class="shop-card" style="width: 20rem; height: 30rem;">
+                      <!-- Konten produk disini -->
+                      @empty($pro->foto)
+                      <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                        <img src="./assets/images/shop-img-1.jpg" width="300" height="260" loading="lazy"
+                          alt="Women Black T-Shirt" class="img-cover">
+                      </figure>
+                      @else 
+                      <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
+                        <img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" width="300" height="260" loading="lazy"
+                          alt="Women Black T-Shirt" class="img-cover">
+                      </figure>
+                      @endempty
+                      
+      
+                      <div class="card-content">
+      
+                        <a href="#" class="card-badge skewBg">{{$pro->jenis}}</a>
+      
+                        <h3 class="h3">
+                          <a href="#" class="card-title">{{$pro->name}}</a>
+                        </h3>
+      
+                        <div class="card-wrapper">
+                          <p class="card-price">${{$pro->harga}}</p>
+      
+                          <button class="card-btn">
+                            <ion-icon name="basket"></ion-icon>
+                          </button>
+                        </div>
+      
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
-                  <img src="./assets/images/shop-img-2.jpg" width="300" height="260" loading="lazy"
-                    alt="Gears 5 Xbox Controller" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="#" class="card-badge skewBg">x-box</a>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Gears 5 Xbox Controller</a>
-                  </h3>
-
-                  <div class="card-wrapper">
-                    <p class="card-price">$29.00</p>
-
-                    <button class="card-btn">
-                      <ion-icon name="basket"></ion-icon>
-                    </button>
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
-                  <img src="./assets/images/shop-img-3.jpg" width="300" height="260" loading="lazy"
-                    alt="GeForce RTX 2070" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="#" class="card-badge skewBg">Graphics</a>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">GeForce RTX 2070</a>
-                  </h3>
-
-                  <div class="card-wrapper">
-                    <p class="card-price">$29.00</p>
-
-                    <button class="card-btn">
-                      <ion-icon name="basket"></ion-icon>
-                    </button>
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="scrollbar-item">
-              <div class="shop-card">
-
-                <figure class="card-banner img-holder" style="--width: 300; --height: 260;">
-                  <img src="./assets/images/shop-img-4.jpg" width="300" height="260" loading="lazy"
-                    alt="Virtual Reality Smiled" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="#" class="card-badge skewBg">VR-Box</a>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Virtual Reality Smiled</a>
-                  </h3>
-
-                  <div class="card-wrapper">
-                    <p class="card-price">$29.00</p>
-
-                    <button class="card-btn">
-                      <ion-icon name="basket"></ion-icon>
-                    </button>
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
+            @endforeach
+          </div>
 
         </div>
       </section>

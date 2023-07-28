@@ -97,8 +97,6 @@
                                                 <td>
                                                     <a class="btn btn-block bg-gradient-success" href="{{ url('product-edit',$pro->id) }}">Edit</a>
                                                 </td>
-                                                
-
                                             </tr>
                                         @endforeach
                                         <!-- Add more rows as needed -->

@@ -808,6 +808,7 @@ body {
 .shop-card {
   box-shadow: var(--shadow-4);
   height: 100%;
+  overflow: hidden;
 }
 
 .shop-card .card-content {
@@ -1246,6 +1247,8 @@ body {
    */
 
   .featured-game .scrollbar-item { min-width: 50%; }
+
+
 
 
 

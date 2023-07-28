@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/home',HomeController::class);
-Route::resource('/admin',AdminController::class);
+Route::resource('/dashboard',AdminController::class);
 Route::resource('/product',ProductController::class);
 
 Route::get('product-edit/{id}',[ProductController::class,'edit']);
