@@ -84,24 +84,20 @@
                                                 <td class="text-center">{{ $pro->jenis }}</td>
                                                 <td class="text-center">{{ $pro->harga }}</td>
                                                 <td class="text-center">{{ $pro->foto }}</td>
-                                                <td class="d-flex justify-content-between>
-                                                    <form method="POST"
-                                                    action="{{ route('product.destroy', $pro->id) }}">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="button"
-                                                        class="btn btn-block bg-gradient-success d-none">Edit</button>
-
-                                                    <a class="btn btn-block bg-gradient-primary" href="{{ route('product.show',$pro->id) }}">Detail
-                                                    </a>
-                                                    &nbsp;&nbsp;
-                                                    <a class="btn btn-block bg-gradient-success" href="{{ url('product-edit',$pro->id) }}">Edit
-                                                    </a>
-                                                    &nbsp;&nbsp;
-                                                    <button type="submit"
-                                                        class="btn btn-block bg-gradient-danger ">Hapus</button>
+                                                <td>
+                                                    <form method="POST" action="{{ route('product.destroy', $pro->id) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-block bg-gradient-danger">Hapus</button>
                                                     </form>
                                                 </td>
+                                                <td>
+                                                    <a class="btn btn-block bg-gradient-primary" href="{{ route('product.show',$pro->id) }}">Detail</a>
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-block bg-gradient-success" href="{{ url('product-edit',$pro->id) }}">Edit</a>
+                                                </td>
+                                                
 
                                             </tr>
                                         @endforeach

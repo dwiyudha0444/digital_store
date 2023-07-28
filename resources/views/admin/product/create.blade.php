@@ -30,36 +30,57 @@
               <div class="card-header">
                 <h3 class="card-title">Quick Example</h3>
               </div>
+
+              
               <!-- /.card-header -->
+
+              @if ($errors->any())
+               <div class="alert alert-danger">
+                   <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                   <ul>
+                       @foreach ($errors->all() as $error)
+                           <li>{{ $error }}</li>
+                       @endforeach
+                   </ul>
+               </div>
+                @endif
+
               <!-- form start -->
-              <form>
+              <form method="POST" action="{{ route('product.store')}}" enctype="multipart/form-data">
+              @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="name">Nama</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
                   </div>
+
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="jenis">Jenis</label>
+                    <input type="text" class="form-control" id="jenis" placeholder="Enter jenis" name="jenis">
                   </div>
+
+                  <div class="form-group">
+                    <label for="harga">Harga</label>
+                    <input type="text" class="form-control" id="harga" placeholder="Enter harga" name="harga">
+                  </div>
+
                   <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <input type="file" class="custom-file-label" id="exampleInputFile" name="foto">
                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                       </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text">Upload</span>
-                      </div>
-                    </div>
                   </div>
-                </div>
+                  </div>
+
+                
                 <!-- /.card-body -->
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+              </div>
               </form>
             </div>
             <!-- /.card -->

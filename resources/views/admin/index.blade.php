@@ -27,10 +27,10 @@
 <script src="{{ asset('dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ asset('dist/js/pages/dashboard2.js')}}"></script>
-<script src="{{ '/assets/plugins/jquery/jquery.min.js' }}"></script>
-<script src="{{ '/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' }}"></script>
-<script src="{{ '/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' }}"></script>
-<script src="{{ '/assets/js/adminlte.min.js' }}"></script>
+<script src="{{ asset('/assets/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('/assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<script src="{{ asset('/assets/js/adminlte.min.js') }}"></script>
 <script>
   var toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
   var currentTheme = localStorage.getItem('theme');
