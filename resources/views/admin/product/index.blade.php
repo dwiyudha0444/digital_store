@@ -70,7 +70,7 @@
                                             <th class="text-center">Jenis</th>
                                             <th class="text-center">Harga</th>
                                             <th class="text-center">Foto</th>
-                                            <th class="text-center">Action</th>
+                                            <th colspan="3" class="text-center">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
