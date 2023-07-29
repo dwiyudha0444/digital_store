@@ -14,8 +14,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $product = Product::orderBy('id','DESC')->get();
-        return view('client.main',compact('product'));
+        // $product = Product::orderBy('id','DESC')->get();
+        return view('client.home');
     }
 
     /**

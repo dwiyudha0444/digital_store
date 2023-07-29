@@ -1,201 +1,107 @@
-<footer class="footer">
-
-    <div class="footer-top">
+    <!-- Footer -->
+    <footer>
       <div class="container">
-
-        <div class="footer-brand">
-
-          <a href="#" class="logo">Gamics</a>
-
-          <p class="footer-text">
-            Gamics marketplace the relase etras thats sheets continig passag.
-          </p>
-
-          <ul class="contact-list">
-
-            <li class="contact-item">
-              <div class="contact-icon">
-                <ion-icon name="location"></ion-icon>
+          <div class="row align-items-center newsletter-area">
+              <div class="col-lg-5">
+                  <div class="newsletter-area-text">
+                      <h4 class="text-white">Subscribe to get notification.</h4>
+                      <p>
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      </p>
+                  </div>
               </div>
-
-              <address class="item-text">
-                Address : PO Box W75 Street lan West new queens
-              </address>
-            </li>
-
-            <li class="contact-item">
-              <div class="contact-icon">
-                <ion-icon name="headset"></ion-icon>
+              <div class="col-lg-6 offset-lg-1">
+                  <div class="newsletter-area-button">
+                      <form action="#">
+                          <div class="form">
+                              <input type="email" name="email" id="mail" placeholder="Enter your email address"
+                                  class="form-control">
+                              <button class="btn bg-secondary border text-capitalize">Subscribe</button>
+                          </div>
+                      </form>
+                  </div>
               </div>
-
-              <a href="tel:+241245654235" class="item-text">Phone : +24 1245 654 235</a>
-            </li>
-
-            <li class="contact-item">
-              <div class="contact-icon">
-                <ion-icon name="mail-open"></ion-icon>
-              </div>
-
-              <a href="mailto:info@exemple.com" class="item-text">Email : info@exemple.com</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Products</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Graphics (26)</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Backgrounds (11)</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Fonts (9)</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Music (3)</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Photography (3)</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Need Help?</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Terms & Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Privacy Policy</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Refund Policy</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Affiliate</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Use Cases</a>
-          </li>
-
-        </ul>
-
-        <div class="footer-wrapper">
-
-          <div class="social-wrapper">
-
-            <p class="footer-list-title">Follow Us</p>
-
-            <ul class="social-list">
-
-              <li>
-                <a href="#" class="social-link" style="background-color: #3b5998">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link" style="background-color: #55acee">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link" style="background-color: #d71e18">
-                  <ion-icon name="logo-pinterest"></ion-icon>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" class="social-link" style="background-color: #1565c0">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-              </li>
-
-            </ul>
-
           </div>
-
-          <div class="footer-newsletter">
-
-            <p class="footer-list-title">Newsletter Sign Up</p>
-
-            <form action="" class="footer-newsletter">
-              <input type="email" name="email_address" aria-label="email" placeholder="Enter your email" required
-                class="email-field">
-
-              <button type="submit" class="footer-btn" aria-label="submit">
-                <ion-icon name="rocket"></ion-icon>
-              </button>
-            </form>
-
+          <div class="row main-footer">
+              <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                  <div class="main-footer-info">
+                      <img src="dist/images/logo/white.png" alt="Logo" class="img-fluid">
+                      <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie malesuada
+                          metus, non molestie ligula laoreet vitae. Ut et fringilla risus, vel.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-lg-2 offset-lg-2 col-md-4 col-sm-6 col-12">
+                  <div class="main-footer-quicklinks">
+                      <h6>Company</h6>
+                      <ul class="quicklink">
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Help &amp; Support</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Terms of Service</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                  <div class="main-footer-quicklinks">
+                      <h6>Quick links</h6>
+                      <ul class="quicklink">
+                          <li><a href="#">New Realease</a></li>
+                          <li><a href="#">Customize</a></li>
+                          <li><a href="#">Sale &amp; Discount</a></li>
+                          <li><a href="#">Men</a></li>
+                          <li><a href="#">Women</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                  <div class="main-footer-quicklinks">
+                      <h6>Account</h6>
+                      <ul class="quicklink">
+                          <li><a href="#">Your Bag</a></li>
+                          <li><a href="#">Profile</a></li>
+                          <li><a href="#">Order Completed</a></li>
+                          <li><a href="#">Log-out</a></li>
+                      </ul>
+                  </div>
+              </div>
           </div>
-
-        </div>
-
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="copyright d-flex justify-content-between align-items-center">
+                      <div class="copyright-text order-2 order-lg-1">
+                          <p>&copy; 2020. Design and Developed by <a href="#">Zakir Soft</a></p>
+                      </div>
+                      <div class="copyright-links order-1 order-lg-2">
+                          <a href="#" class="ml-0"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-youtube"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container">
-
-        <p class="copyright">
-          &copy; 2022 Gamics. All Right Reserved by <a href="#" class="copyright-link">codewithsadee</a>
-        </p>
-
-        <img src="./assets/images/footer-bottom-img.png" width="340" height="21" loading="lazy" alt=""
-          class="footer-bottom-img">
-
-      </div>
-    </div>
-
   </footer>
+  <!-- Footer -->
 
+  <script src="client/src/js/jquery.min.js"></script>
+  <script src="client/src/js/bootstrap.min.js"></script>
+  <script src="client/src/scss/vendors/plugin/js/slick.min.js"></script>
+  <script src="client/src/scss/vendors/plugin/js/jquery.nice-select.min.js"></script>
+  <script src="client/dist/main.js"></script>
+  <script>
+      function openNav() {
 
+          document.getElementById("mySidenav").style.width = "350px";
+          $('#overlayy').addClass("active");
+      }
 
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="caret-up"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          $('#overlayy').removeClass("active");
+      }
+  </script>
 </body>
-
 </html>
