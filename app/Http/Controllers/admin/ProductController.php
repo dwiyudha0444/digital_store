@@ -35,6 +35,7 @@ class ProductController extends Controller
             'name' => 'required|max:255',
             'jenis' => 'required|max:45',
             'harga' => 'required',
+            'keterangan' => 'required',
             'foto' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg'
             ]);
             //Product::create($request->all());
@@ -53,6 +54,7 @@ class ProductController extends Controller
                     'name' => $request->name,
                     'jenis' => $request->jenis,
                     'harga' => $request->harga,
+                    'keterangan' => $request->keterangan,
                     'foto' => $fileName,
                     'created_at' => now(),
               ]);
@@ -90,6 +92,7 @@ class ProductController extends Controller
             'name' => 'required|max:255',
             'jenis' => 'required|max:45',
             'harga' => 'required',
+            'keterangan' => 'required',
             'foto' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg'
             ]);
             //Film::create($request->all());
@@ -116,6 +119,7 @@ class ProductController extends Controller
                     'name' => $request->name,
                     'jenis' => $request->jenis,
                     'harga' => $request->harga,
+                    'keterangan' => $request->keterangan,
                     'foto' => $fileName,
                     'updated_at' => now(),
               ]);

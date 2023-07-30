@@ -10,5 +10,5 @@ class Product extends Model
     //tambahkan kode untuk mapping ke tabel film
     protected $table = 'product';
     //mapping ke kolom fieldnya
-    protected $fillable = ['name','jenis','harga','foto'];
+    protected $fillable = ['name','jenis','harga','keterangan','foto'];
 }

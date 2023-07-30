@@ -65,6 +65,11 @@
                   </div>
 
                   <div class="form-group">
+                    <label for="keterangan">Keterangan</label>
+                    <input type="text" class="form-control" id="keterangan" placeholder="Enter keterangan" name="keterangan">
+                  </div>
+
+                  <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">

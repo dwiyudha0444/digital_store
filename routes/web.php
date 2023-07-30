@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\client\HomeController;
 use App\Http\Controllers\client\ShopController;
+use App\Http\Controllers\client\OrderController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\ProductController;
 
@@ -24,6 +25,12 @@ Route::get('/', function () {
 //home
 Route::resource('/home',HomeController::class);
 Route::resource('/shop',ShopController::class);
+
+//payment-form
+Route::get('/order',[OrderController::class,'index']);
+Route::post('/checkout',[OrderController::class,'checkout']);
+
+// Route::post('/invoice',[OrderController::class,'invoice']);
 
 //admin
 Route::resource('/dashboard',AdminController::class);

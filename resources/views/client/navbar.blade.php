@@ -114,7 +114,7 @@
                       </div>
                       <div class="menu-icon ml-auto">
                           <ul>
-                              <li>
+                              {{-- <li>
                                   <a href="wishlist.html">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
                                           viewBox="0 0 22 20">
@@ -127,8 +127,8 @@
                                       </svg>
                                       <span class="heart">3</span>
                                   </a>
-                              </li>
-                              <li>
+                              </li> --}}
+                              {{-- <li>
                                   <a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                           viewBox="0 0 22 22">
                                           <g id="Icon" transform="translate(-1524 -89)">
@@ -148,7 +148,7 @@
                                       </svg>
                                       <span class="cart">3</span>
                                   </a>
-                              </li>
+                              </li> --}}
                               <li>
                                   <a href="account.html"><svg xmlns="http://www.w3.org/2000/svg" width="18"
                                           height="20" viewBox="0 0 18 20">
