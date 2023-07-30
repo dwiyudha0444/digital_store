@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Olog - Home</title>
-    <link rel="stylesheet" href="client/dist/main.css">
+    <link rel="stylesheet" href="{{ asset('client/dist/main.css')}}">
 </head>
 
 <body>

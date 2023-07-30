@@ -25,7 +25,7 @@
           <div class="row main-footer">
               <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                   <div class="main-footer-info">
-                      <img src="dist/images/logo/white.png" alt="Logo" class="img-fluid">
+                      <img src="{{ url('client/dist/images/logo/white.png') }}" alt="Logo" class="img-fluid">
                       <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie malesuada
                           metus, non molestie ligula laoreet vitae. Ut et fringilla risus, vel.
@@ -86,11 +86,11 @@
   </footer>
   <!-- Footer -->
 
-  <script src="client/src/js/jquery.min.js"></script>
-  <script src="client/src/js/bootstrap.min.js"></script>
-  <script src="client/src/scss/vendors/plugin/js/slick.min.js"></script>
-  <script src="client/src/scss/vendors/plugin/js/jquery.nice-select.min.js"></script>
-  <script src="client/dist/main.js"></script>
+  <script src="{{ asset('client/src/js/jquery.min.js')}}"></script>
+  <script src="{{ asset('client/src/js/bootstrap.min.js')}}"></script>
+  <script src="{{ asset('client/src/scss/vendors/plugin/js/slick.min.js')}}"></script>
+  <script src="{{ asset('client/src/scss/vendors/plugin/js/jquery.nice-select.min.js')}}"></script>
+  <script src="{{ asset('client/dist/main.js')}}"></script>
   <script>
       function openNav() {
 

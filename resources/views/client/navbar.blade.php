@@ -70,13 +70,11 @@
               <div class="d-none d-lg-block">
                   <nav class="menu-area d-flex align-items-center">
                       <div class="logo">
-                          <a href="index.html"><img src="dist/images/logo/logo.png" alt="logo" /></a>
+                          <a href="index.html"><img src="{{ url('client/dist/images/logo/logo.png') }}" alt="logo" /></a>
                       </div>
                       <ul class="main-menu d-flex align-items-center">
-                          <li><a class="active" href="index.html">Home</a></li>
-                          <li><a href="shop.html">Men</a></li>
-                          <li><a href="shop.html">Women</a></li>
-                          <li><a href="shop.html">Shop</a></li>
+                          <li><a class="active" href="{{ url('/home')}}">Home</a></li>
+                          <li><a href="{{ url('/shop')}}">Shop</a></li>
                           <li>
                               <a href="javascript:void(0)">Category
                                   <svg xmlns="http://www.w3.org/2000/svg" width="9.98" height="5.69"
