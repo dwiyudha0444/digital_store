@@ -11,4 +11,10 @@ class Product extends Model
     protected $table = 'product';
     //mapping ke kolom fieldnya
     protected $fillable = ['name','jenis','harga','keterangan','foto'];
+
+    public function order()
+    {
+        return $this->hasOne(Order::class);
+    }
+
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\client\HomeController;
 use App\Http\Controllers\client\ShopController;
 use App\Http\Controllers\client\OrderController;
+use App\Http\Controllers\client\OrderFormController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\ProductController;
 
@@ -25,6 +26,8 @@ Route::get('/', function () {
 //home
 Route::resource('/home',HomeController::class);
 Route::resource('/shop',ShopController::class);
+
+Route::get('form-order/{id}',[OrderFormController::class,'edit']);
 
 //payment-form
 Route::get('/order',[OrderController::class,'index']);

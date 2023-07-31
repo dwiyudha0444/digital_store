@@ -5,6 +5,7 @@ namespace App\Http\Controllers\client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Product;
 use DB;
 
 class OrderController extends Controller
@@ -67,9 +68,10 @@ class OrderController extends Controller
         return view('client.payment.invoice',compact('order'));
     }
 
-    public function index()
+    public function index($id)
     {
-        return view('client.payment.form');
+        $pro = Product::find($id);
+        return view('client.payment.form',compact('pro'));
     }
 
     /**
