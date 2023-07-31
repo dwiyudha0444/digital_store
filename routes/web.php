@@ -30,6 +30,7 @@ Route::resource('/shop',ShopController::class);
 Route::get('/order',[OrderController::class,'index']);
 Route::post('/checkout',[OrderController::class,'checkout']);
 
+
 // Route::post('/invoice',[OrderController::class,'invoice']);
 
 //admin
