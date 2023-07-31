@@ -190,10 +190,8 @@
                               </svg>
                           </div>
                       </div>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="shop.html">Men</a></li>
-                      <li><a href="shop.html">Women</a></li>
-                      <li><a href="shop.html">Shop</a></li>
+                      <li><a href="{{ url('/home') }}">Home</a></li>
+                      <li><a href="{{ url('/shop') }}">Shop</a></li>
                       <li>
                           <a href="javascript:void(0)">Category
                               <svg xmlns="http://www.w3.org/2000/svg" width="9.98" height="5.69"
@@ -217,7 +215,7 @@
                   </div>
                   <div class="mobile-nav d-flex align-items-center justify-content-between">
                       <div class="logo">
-                          <a href="index.html"><img src="dist/images/logo/logo.png" alt="logo" /></a>
+                          <a href="index.html"><img src="{{ url('client/dist/images/logo/logo.png') }}" alt="logo" /></a>
                       </div>
                       <div class="search-bar">
                           <input type="text" placeholder="Search for product...">
@@ -237,7 +235,7 @@
                       </div>
                       <div class="menu-icon">
                           <ul>
-                              <li> <a href="wishlist.html">
+                              {{-- <li> <a href="wishlist.html">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
                                           viewBox="0 0 22 20">
                                           <g id="Heart" transform="translate(1 1)">
@@ -271,7 +269,7 @@
                                       </svg>
                                       <span class="cart">3</span>
                                   </a>
-                              </li>
+                              </li> --}}
                               <li>
                                   <a href="account.html">
                                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20"

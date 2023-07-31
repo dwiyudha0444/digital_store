@@ -4,6 +4,7 @@
 	<title>Payments</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
     <script type="text/javascript"
@@ -97,7 +98,9 @@
           window.snap.pay('{{ $snapToken }}', {
             onSuccess: function(result){
               /* You may add your own implementation here */
-              alert("payment success!"); console.log(result);
+              alert("payment success!");
+			  window.location.href = 'invoice/{{ $order->id }}'
+			   console.log(result);
             },
             onPending: function(result){
               /* You may add your own implementation here */

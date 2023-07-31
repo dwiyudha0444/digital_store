@@ -100,7 +100,7 @@
                                     <li class="colorall color-2"></li>
                                 </div>
                             </div> --}}
-                            <div class="product-pricelist-selector-quantity">
+                            {{-- <div class="product-pricelist-selector-quantity">
                                 <h6>quantity</h6>
                                 <div class="wan-spinner wan-spinner-4">
                                     <a href="javascript:void(0)" class="minus">
@@ -123,12 +123,14 @@
                                             </g>
                                         </svg></a>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="product-pricelist-selector-button">
+
                             <a class="btn cart-bg " href="#">Buy Now
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                             </a>
+
                             {{-- <a class="btn cart-bg " href="#">Add to cart
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                             </a>
@@ -151,7 +153,7 @@
                                     </g>
                                 </svg>
                             </a> --}}
-                            <div class="product-pricelist-selector-button-item">
+                            {{-- <div class="product-pricelist-selector-button-item">
                                 <div class="shipping">
                                     <div class="icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="21.4" height="17.937"
@@ -211,7 +213,7 @@
                                     </div>
                                     <p>Cash on Delivery</p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -220,7 +222,7 @@
     </section>
     <!-- Product Details Area End -->
 
-    {{-- <!-- Features Section Start -->
+    <!-- Features Section Start -->
     <section class="features bg-lightwhite">
         <div class="container">
             <div class="row">
@@ -437,7 +439,7 @@
             </div>
         </div>
     </section>
-    <!-- Features Section End --> --}}
+    <!-- Features Section End -->
     
 </main>
 @endsection

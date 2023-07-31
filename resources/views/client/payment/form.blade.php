@@ -3,6 +3,7 @@
 <head>
 	<title>Payments</title>
 	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="{{ asset('form_pay/images/icons/favicon.ico"')}}"/>

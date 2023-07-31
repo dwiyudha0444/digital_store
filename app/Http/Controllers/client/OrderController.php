@@ -61,6 +61,12 @@ class OrderController extends Controller
         
     }
 
+    public function invoice($id)
+    {
+        $order = Order::find($id);
+        return view('client.payment.invoice',compact('order'));
+    }
+
     public function index()
     {
         return view('client.payment.form');
