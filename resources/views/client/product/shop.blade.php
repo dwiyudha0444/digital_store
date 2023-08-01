@@ -85,8 +85,8 @@
     <section class="populerproduct bg-white p-0 shop-product">
         <div class="container">
             <div class="row">
+                @foreach ($product as $pro)
                 <div class="col-md-4 col-sm-6">
-                    @foreach ($product as $pro)
                     <div class="product-item">
                         <div class="product-item-image">
                             <a href="{{ route('shop.show',$pro->id) }}"><img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" alt="Product Name"
@@ -123,8 +123,9 @@
                             <span>Rp.{{ $pro->harga }}</span> <del>$999</del>
                         </div>
                     </div>
-                    @endforeach
+                    
                 </div>
+                @endforeach
             </div>
         </div>
     </section>

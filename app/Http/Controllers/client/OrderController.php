@@ -38,6 +38,7 @@ class OrderController extends Controller
                  'gross_amount' => $order->total_harga,
              ),
              'customer_details' => array(
+                'nama_product' => $request->nama_product,
                  'nama' => $request->nama,
                  'no_wa' => $request->no_wa,
              ),
@@ -68,10 +69,9 @@ class OrderController extends Controller
         return view('client.payment.invoice',compact('order'));
     }
 
-    public function index($id)
+    public function index()
     {
-        $pro = Product::find($id);
-        return view('client.payment.form',compact('pro'));
+        return view('client.payment.form');
     }
 
     /**

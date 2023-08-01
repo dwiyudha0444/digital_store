@@ -10,12 +10,12 @@ class Order extends Model
         //tambahkan kode untuk mapping ke tabel film
         protected $table = 'order';
         //mapping ke kolom fieldnya
-        protected $fillable = ['id_product','nama','no_wa','qty','total_harga','status'];
+        protected $fillable = ['nama_product','nama','no_wa','qty','total_harga','status'];
 
-        public function product()
-        {
-        return $this->belongsTo(Product::class,'id_product');
-        }
+        // public function product()
+        // {
+        // return $this->belongsTo(Product::class,'id_product');
+        // }
 
 }
 

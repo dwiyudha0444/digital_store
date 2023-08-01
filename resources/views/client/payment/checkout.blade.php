@@ -48,6 +48,12 @@
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Name is reauired">
+						<span class="label-input100">Product</span>
+						<input class="input100" type="text" value="{{ $order->nama_product }}" name="nama_product" placeholder="Type your name">
+						{{-- <span class="focus-input100" data-symbol="&#xf206;"></span> --}}
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Name is reauired">
 						<span class="label-input100">Nama</span>
 						<input class="input100" type="text" value="{{ $order->nama }}" disabled>
 						{{-- <span class="focus-input100" data-symbol="&#xf206;"></span> --}}

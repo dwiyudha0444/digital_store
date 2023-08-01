@@ -8,6 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Olog - Home</title>
     <link rel="stylesheet" href="{{ asset('client/dist/main.css')}}">
+    <style>
+
+
+    </style>
 </head>
 
 <body>

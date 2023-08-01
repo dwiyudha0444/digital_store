@@ -1,17 +1,7 @@
 @extends('client.index')
 @section('content')
 <main>
-    <style>
-        /* Custom styles for 2x2 grid on mobile devices */
-@media (max-width: 568px) {
-    .populerproduct .row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 15px;
-    }
-}
 
-    </style>
     <!--Banner Area Start -->
     <section class="banner-area">
         <div class="container">
