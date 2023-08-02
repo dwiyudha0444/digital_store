@@ -1,119 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Payments</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="utf-8">
 
-    <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
-    <script type="text/javascript"
-      src="https://app.sandbox.midtrans.com/snap/snap.js"
-      data-client-key="{{ config('midtrans.client_key') }}"></script>
-    <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
-  
 
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{ asset('form_pay/images/icons/favicon.ico"')}}"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/vendor/bootstrap/css/bootstrap.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/fonts/iconic/css/material-design-iconic-font.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/vendor/animate/animate.css')}}">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/vendor/css-hamburgers/hamburgers.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/vendor/animsition/css/animsition.min.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/vendor/select2/select2.min.css')}}">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/vendor/daterangepicker/daterangepicker.css')}}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/css/util.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('form_pay/css/main.css')}}">
-<!--===============================================================================================-->
+    <title>company invoice - Bootdey.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            margin-top: 20px;
+            color: #484b51;
+        }
 
+        .text-secondary-d1 {
+            color: #728299 !important;
+        }
+
+        .page-header {
+            margin: 0 0 1rem;
+            padding-bottom: 1rem;
+            padding-top: .5rem;
+            border-bottom: 1px dotted #e2e2e2;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .page-title {
+            padding: 0;
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 300;
+        }
+
+        .brc-default-l1 {
+            border-color: #dce9f0 !important;
+        }
+
+        .ml-n1,
+        .mx-n1 {
+            margin-left: -.25rem !important;
+        }
+
+        .mr-n1,
+        .mx-n1 {
+            margin-right: -.25rem !important;
+        }
+
+        .mb-4,
+        .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, .1);
+        }
+
+        .text-grey-m2 {
+            color: #888a8d !important;
+        }
+
+        .text-success-m2 {
+            color: #86bd68 !important;
+        }
+
+        .font-bolder,
+        .text-600 {
+            font-weight: 600 !important;
+        }
+
+        .text-110 {
+            font-size: 110% !important;
+        }
+
+        .text-blue {
+            color: #478fcc !important;
+        }
+
+        .pb-25,
+        .py-25 {
+            padding-bottom: .75rem !important;
+        }
+
+        .pt-25,
+        .py-25 {
+            padding-top: .75rem !important;
+        }
+
+        .bgc-default-tp1 {
+            background-color: rgba(121, 169, 197, .92) !important;
+        }
+
+        .bgc-default-l4,
+        .bgc-h-default-l4:hover {
+            background-color: #f3f8fa !important;
+        }
+
+        .page-header .page-tools {
+            -ms-flex-item-align: end;
+            align-self: flex-end;
+        }
+
+        .btn-light {
+            color: #757984;
+            background-color: #f5f6f9;
+            border-color: #dddfe4;
+        }
+
+        .w-2 {
+            width: 1rem;
+        }
+
+        .text-120 {
+            font-size: 120% !important;
+        }
+
+        .text-primary-m1 {
+            color: #4087d4 !important;
+        }
+
+        .text-danger-m1 {
+            color: #dd4949 !important;
+        }
+
+        .text-blue-m2 {
+            color: #68a3d5 !important;
+        }
+
+        .text-150 {
+            font-size: 150% !important;
+        }
+
+        .text-60 {
+            font-size: 60% !important;
+        }
+
+        .text-grey-m1 {
+            color: #7b7d81 !important;
+        }
+
+        .align-bottom {
+            vertical-align: bottom !important;
+        }
+    </style>
 </head>
+
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100" style="background-image: url('form_pay/images/bg-01.jpg');">
-			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				
-					<span class="login100-form-title p-b-49">
-						Payment Detail
-					</span>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <div class="page-content container">
+        <div class="page-header text-blue-d2">
+            <h1 class="page-title text-secondary-d1">
+                Invoice
+                <small class="page-info">
+                    <i class="fa fa-angle-double-right text-80"></i>
+                    ID: #111-{{ $order->id }}
+                </small>
+            </h1>
+            <div class="page-tools">
+                <div class="action-buttons">
+                    <a class="btn bg-white btn-light mx-1px text-95" href="#" data-title="Print">
+                        <i class="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
+                        Print
+                    </a>
+                    <a class="btn bg-white btn-light mx-1px text-95" href="#" data-title="PDF">
+                        <i class="mr-1 fa fa-file-pdf-o text-danger-m1 text-120 w-2"></i>
+                        Export
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container px-0">
+            <div class="row mt-4">
+                <div class="col-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center text-150">
+                                <i class="fa fa-book fa-2x text-success-m2 mr-1"></i>
+                                <span class="text-default-d3">Bootdey.com</span>
+                            </div>
+                        </div>
+                    </div>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Name is reauired">
-						<span class="label-input100">Nama</span>
-						<input class="input100" type="text" value="{{ $order->nama }}" disabled>
-						{{-- <span class="focus-input100" data-symbol="&#xf206;"></span> --}}
-					</div>
+                    <hr class="row brc-default-l1 mx-n1 mb-4" />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div>
+                                <span class="text-sm text-grey-m2 align-middle">To:</span>
+                                <span class="text-600 text-110 text-blue align-middle">{{ $order->nama }}</span>
+                            </div>
+                            <div class="text-grey-m2">
+                                <div class="my-1">
+                                    Street, City
+                                </div>
+                                <div class="my-1">
+                                    State, Country
+                                </div>
+                                <div class="my-1"><i class="fa fa-phone fa-flip-horizontal text-secondary"></i> <b
+                                        class="text-600">{{ $order->no_wa }}</b></div>
+                            </div>
+                        </div>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate="No WhatsApp is required">
-						<span class="label-input100">WhatsApp</span>
-						<input class="input100" type="text" value="{{ $order->no_wa }}" disabled>
-					</div>
+                        <div class="text-95 col-sm-6 align-self-start d-sm-flex justify-content-end">
+                            <hr class="d-sm-none" />
+                            <div class="text-grey-m2">
+                                <div class="mt-1 mb-2 text-secondary-m1 text-600 text-125">
+                                    Invoice
+                                </div>
+                                <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span
+                                        class="text-600 text-90">ID:</span> #111-{{ $order->id }}</div>
+                                <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span
+                                        class="text-600 text-90">Issue Date:</span> {{ $order->created_at }}</div>
+                                <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span
+                                        class="text-600 text-90">Status:</span> <span
+                                        class="badge badge-warning badge-pill px-25">{{ $order->status }}</span></div>
+                            </div>
+                        </div>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate="qty is required">
-						<span class="label-input100">Qty</span>
-						<input class="input100" type="text" value="{{ $order->qty }}" disabled>
-					</div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="row text-600 text-white bgc-default-tp1 py-25">
+                            <div class="d-none d-sm-block col-1">#</div>
+                            <div class="col-9 col-sm-5">Product</div>
+                            <div class="d-none d-sm-block col-4 col-sm-2">Jumlah</div>
+                            <div class="d-none d-sm-block col-sm-2">Harga Satuan</div>
+                            <div class="col-2">Harga Total</div>
+                        </div>
+                        <div class="text-95 text-secondary-d3">
+                            <div class="row mb-2 mb-sm-0 py-25">
+                                <div class="d-none d-sm-block col-1">1</div>
+                                <div class="col-9 col-sm-5">{{ $order->nama_product }}</div>
+                                <div class="d-none d-sm-block col-2">{{ $order->qty }}</div>
+                                <div class="d-none d-sm-block col-2 text-95">$10</div>
+                                <div class="col-2 text-secondary-d2">$20</div>
+                            </div>
 
-                    <div class="wrap-input100 validate-input m-b-23" data-validate="qty is required">
-						<span class="label-input100">Total Harga</span>
-						<input class="input100" type="text"  value="{{ $order->total_harga }}" disabled>
-					</div>
-
-                    <div class="wrap-input100 validate-input m-b-23" data-validate="qty is required">
-						<span class="label-input100">Status</span>
-						<input class="input100" type="text"  value="{{ $order->status }}" disabled>
-					</div>
-					
-					<div class="text-right p-t-8 p-b-31">
-						
-					</div>
-					
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							
-                            <a class="login100-form-btn " href="{{ url('/home') }}">Back Home
-                                
-                            </a>
-						</div>
-					</div>
-
-				
-			</div>
-		</div>
-	</div>
-	
+                        </div>
+                        <div class="row border-b-2 brc-default-l2"></div>
 
 
-	<div id="dropDownSelect1"></div>
-	
-
-
-<!--===============================================================================================-->
-	<script src="{{ asset('form_pay/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('form_pay/vendor/animsition/js/animsition.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('form_pay/vendor/bootstrap/js/popper.js')}}"></script>
-	<script src="{{ asset('form_pay/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('form_pay/vendor/select2/select2.min.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('form_pay/vendor/daterangepicker/moment.min.js')}}"></script>
-	<script src="{{ asset('form_pay/vendor/daterangepicker/daterangepicker.js')}}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('form_pay/vendor/countdowntime/countdowntime.js')}}') }}"></script>
-<!--===============================================================================================-->
-	<script src="{{ asset('form_pay/js/main.js')}}"></script>
-
+                        <div class="row mt-3">
+                            <div class="col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0">
+                                Extra note such as company or payment information...
+                            </div>
+                            <div class="col-12 col-sm-5 text-grey text-90 order-first order-sm-last">
+                                <div class="row my-2">
+                                    <div class="col-7 text-right">
+                                        SubTotal
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="text-120 text-secondary-d1">$2,250</span>
+                                    </div>
+                                </div>
+                                <div class="row my-2">
+                                    <div class="col-7 text-right">
+                                        Tax (10%)
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="text-110 text-secondary-d1">$225</span>
+                                    </div>
+                                </div>
+                                <div class="row my-2 align-items-center bgc-primary-l3 p-2">
+                                    <div class="col-7 text-right">
+                                        Total Amount
+                                    </div>
+                                    <div class="col-5">
+                                        <span class="text-150 text-success-d3 opacity-2">Rp.{{ $order->total_harga }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div>
+                            <span class="text-secondary-d1 text-105">Thank you for your business</span>
+                            <a href="{{ url('/home') }}" class="btn btn-info btn-bold px-4 float-right mt-3 mt-lg-0 mb-5">Back Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"></script>
 </body>
+
 </html>
