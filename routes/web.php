@@ -5,6 +5,8 @@ use App\Http\Controllers\client\HomeController;
 use App\Http\Controllers\client\ShopController;
 use App\Http\Controllers\client\OrderController;
 use App\Http\Controllers\client\OrderFormController;
+use App\Http\Controllers\client\ContactController;
+
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\ProductController;
 
@@ -26,13 +28,13 @@ Route::get('/', function () {
 //home
 Route::resource('/home',HomeController::class);
 Route::resource('/shop',ShopController::class);
-
-Route::get('form-order/{id}',[OrderFormController::class,'edit']);
+Route::resource('/contact',ContactController::class);
 
 //payment-form
 Route::get('/order',[OrderController::class,'index']);
 Route::post('/checkout',[OrderController::class,'checkout']);
 Route::get('/invoice/{id}',[OrderController::class,'invoice']);
+Route::get('form-order/{id}',[OrderFormController::class,'edit']);
 
 
 // Route::post('/invoice',[OrderController::class,'invoice']);
