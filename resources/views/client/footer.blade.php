@@ -10,17 +10,7 @@
                       </p>
                   </div>
               </div>
-              <div class="col-lg-6 offset-lg-1">
-                  <div class="newsletter-area-button">
-                      <form action="#">
-                          <div class="form">
-                              <input type="email" name="email" id="mail" placeholder="Enter your email address"
-                                  class="form-control">
-                              <button class="btn bg-secondary border text-capitalize">Subscribe</button>
-                          </div>
-                      </form>
-                  </div>
-              </div>
+
           </div>
           <div class="row main-footer">
               <div class="col-lg-4 col-md-12 col-sm-12 col-12">
@@ -71,7 +61,7 @@
               <div class="col-lg-12">
                   <div class="copyright d-flex justify-content-between align-items-center">
                       <div class="copyright-text order-2 order-lg-1">
-                          <p>&copy; 2020. Design and Developed by <a href="#">Zakir Soft</a></p>
+                          <p>&copy; 2020. <a href="#">Digital Store</a></p>
                       </div>
                       <div class="copyright-links order-1 order-lg-2">
                           <a href="#" class="ml-0"><i class="fab fa-facebook-f"></i></a>

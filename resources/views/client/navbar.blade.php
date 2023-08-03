@@ -74,9 +74,9 @@
                       </div>
                       <ul class="main-menu d-flex align-items-center">
                           <li><a class="active" href="{{ url('/home')}}">Home</a></li>
-                          <li><a href="{{ url('/shop')}}">Shop</a></li>
+                          <li><a class="active" href="{{ url('/shop')}}">Shop</a></li>
                           <li>
-                              <a href="javascript:void(0)">Category
+                              <a class="active" href="javascript:void(0)">Category
                                   <svg xmlns="http://www.w3.org/2000/svg" width="9.98" height="5.69"
                                       viewBox="0 0 9.98 5.69">
                                       <g id="Arrow" transform="translate(0.99 0.99)">
@@ -94,7 +94,7 @@
                                   <li><a href="javascript:void(0)">Category 5</a></li>
                               </ul>
                           </li>
-                          <li><a href="javascript:void(0)">Sales</a></li>
+                          <li><a class="active" href="{{ url('/contact') }}">Kontak</a></li>
                       </ul>
                       <div class="search-bar">
                           <input type="text" placeholder="Search for product...">

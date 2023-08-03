@@ -293,6 +293,15 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form__div">
+                                            <input type="text" class="form__input" value="{{ $pro->harga }}" name="harga" placeholder="
+                                            ">
+                                            <label for="" class="form__label">Harga</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form__div">
                                             <input type="text" class="form__input" name="nama" placeholder="
                                             ">
                                             <label for="" class="form__label">Name</label>

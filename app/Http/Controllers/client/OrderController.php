@@ -17,7 +17,7 @@ class OrderController extends Controller
     public function checkout(Request $request)
     {
         
-        $request->request->add(['total_harga' => $request->qty * 10000, 'status' =>'unpaid']);
+        $request->request->add(['total_harga' => $request->qty * $request->harga, 'status' =>'unpaid']);
         // dd($request->all());
         $order = Order::create($request->all());
      
@@ -26,7 +26,7 @@ class OrderController extends Controller
          // Set your Merchant Server Key
          \Midtrans\Config::$serverKey = config('midtrans.server_key');
          // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-         \Midtrans\Config::$isProduction = false;
+         \Midtrans\Config::$isProduction = config('midtrans.is_production');
          // Set sanitization on (default)
          \Midtrans\Config::$isSanitized = true;
          // Set 3DS transaction for credit card to true
@@ -39,7 +39,8 @@ class OrderController extends Controller
              ),
              'customer_details' => array(
                 'nama_product' => $request->nama_product,
-                 'nama' => $request->nama,
+                 'first_name' => $request->nama,
+                 'last_name' => '',
                  'no_wa' => $request->no_wa,
              ),
          );
@@ -55,7 +56,7 @@ class OrderController extends Controller
         $hashed = hash("sha512", $request->order_id . $request->status_code . $request->gross_amount . $serverKey);
         
         if ($hashed == $request->signature_key) {
-            if ($request->transaction_status == 'capture') {
+            if ($request->transaction_status == 'capture' or $request->transaction_status == 'settlement') {
                 $order = Order::find($request->order_id);
                 $order->update(['status' => 'paid']);
             }
