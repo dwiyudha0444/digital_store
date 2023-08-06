@@ -33,25 +33,11 @@
                                 <ul class='exzoom_img_ul'>
                                     <li>
                                         @empty($pro->foto)
-                                        <img src="{{ url('client/dist/images/product-deatils/1-big-mage.jpg') }}" class="img-fluid">
+                                        <img src="{{ url('client/dist/images/product-deatils/1-big-mage.jpg') }}" >
                                         @else
-                                        <img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" class="img-fluid">
+                                        <img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" >
                                         @endempty
                                     </li>
-                                    {{-- <li>
-                                        <img src="{{ url('client/dist/images/product-deatils/1-big-mage.jpg') }}" class="img-fluid">
-                                        
-                                    </li>
-                                    <li>
-                                        
-                                        <img src="{{ url('client/dist/images/product-deatils/1-big-mage.jpg') }}" class="img-fluid">
-                                        
-                                    </li>
-                                    <li>
-                                        
-                                        <img src="{{ url('client/dist/images/product-deatils/1-big-mage.jpg') }}" class="img-fluid">
-                                        
-                                    </li> --}}
                                 </ul>
                             </div>
                             <div class="exzoom_nav"></div>
@@ -238,7 +224,7 @@
                     <div class="product-item">
                         <div class="product-item-image">
                             <a href="{{ route('shop.show',$pro->id) }}"><img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" alt="Product Name"
-                                    class="img-fluid"></a>
+                                    ></a>
                             <div class="cart-icon">
                                 <a href="#"><i class="far fa-heart"></i></a>
                                 <a href="#">

@@ -9,6 +9,7 @@ use App\Http\Controllers\client\ContactController;
 
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\ProductController;
+use App\Http\Controllers\admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +41,12 @@ Route::get('form-order/{id}',[OrderFormController::class,'edit']);
 // Route::post('/invoice',[OrderController::class,'invoice']);
 
 //admin
-Route::resource('/dashboard',AdminController::class);
+Route::resource('/dashboard',DashboardController::class);
 Route::resource('/product',ProductController::class);
 //admin-edit
 Route::get('product-edit/{id}',[ProductController::class,'edit']);
+
+//auth
+Auth::routes();
+
+Route::get('/home1', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

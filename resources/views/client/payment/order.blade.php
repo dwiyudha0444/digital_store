@@ -302,7 +302,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form__div">
-                                            <input type="text" class="form__input" name="nama" placeholder="
+                                            <input type="text" value="{{ Auth::user()->name }}" class="form__input" name="nama" placeholder="
                                             ">
                                             <label for="" class="form__label">Name</label>
                                         </div>
