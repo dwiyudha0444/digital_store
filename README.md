@@ -87,9 +87,35 @@ Use the `BLANK_README.md` to get started.
 
 ### Installation
 
-1. Copy file .env.example
+1. Copy file .env.example ubahke .env
+   
+ ```bash
+cp .env.example .env
+  ```
+2. dsd
 
-3. ds
+composer install
+
+3. df
+
+
+ ```bash
+php artisan key:generate
+  ```
+
+4. dsd
+   
+   php artisan migrate
+
+5. ds
+
+php artisan migrate
+
+
+6. 
+7. sd
+
+8. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
