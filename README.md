@@ -89,7 +89,7 @@ Use the `BLANK_README.md` to get started.
 
   * Salin file .env.example dan ubah namanya menjadi .env
   ```sh
- cp .env.example .env
+  cp .env.example .env
   ```
 
   * Instal Dependensi
@@ -102,10 +102,10 @@ Use the `BLANK_README.md` to get started.
   php artisan key:generate
   ```
 
- * Atur Konfigurasi Database pada env
+  * Atur Konfigurasi Database pada env
 
 
-* Jalankan Migrasi Database
+  * Jalankan Migrasi Database
   ```sh
   php artisan migrate
   ```
