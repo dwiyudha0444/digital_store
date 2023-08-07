@@ -32,19 +32,19 @@ Route::resource('/shop',ShopController::class);
 Route::resource('/contact',ContactController::class);
 
 //payment-form
-Route::get('/order',[OrderController::class,'index']);
-Route::post('/checkout',[OrderController::class,'checkout']);
-Route::get('/invoice/{id}',[OrderController::class,'invoice']);
-Route::get('form-order/{id}',[OrderFormController::class,'edit']);
+Route::get('/order',[OrderController::class,'index'])->middleware('auth');
+Route::post('/checkout',[OrderController::class,'checkout'])->middleware('auth');
+Route::get('/invoice/{id}',[OrderController::class,'invoice'])->middleware('auth');
+Route::get('form-order/{id}',[OrderFormController::class,'edit'])->middleware('auth');
 
 
 // Route::post('/invoice',[OrderController::class,'invoice']);
 
 //admin
-Route::resource('/dashboard',DashboardController::class);
-Route::resource('/product',ProductController::class);
+Route::resource('/dashboard',DashboardController::class)->middleware(['auth']);
+Route::resource('/product',ProductController::class)->middleware(['auth']);
 //admin-edit
-Route::get('product-edit/{id}',[ProductController::class,'edit']);
+Route::get('product-edit/{id}',[ProductController::class,'edit'])->middleware(['auth']);
 
 //auth
 Auth::routes();

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\User;
 use DB;
 
 class DashboardController extends Controller
@@ -17,11 +18,13 @@ class DashboardController extends Controller
     {
         $totalProduct = Product::count();
         $totalOrder = Order::count();
+        $totalUser = User::count();
 
         
         return view('admin.dashboard.index')
         ->with('totalProduct',$totalProduct)
-        ->with('totalOrder',$totalOrder);
+        ->with('totalOrder',$totalOrder)
+        ->with('totalUser',$totalUser);
     }
 
     /**

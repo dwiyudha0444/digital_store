@@ -74,15 +74,15 @@
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="pages/tables/data.html" class="nav-link">
+                             <a href="{{ url('/taborder') }}" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
-                                 <p>DataTables</p>
+                                 <p>Order</p>
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="pages/tables/jsgrid.html" class="nav-link">
+                             <a href="{{ url('/user') }}" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
-                                 <p>jsGrid</p>
+                                 <p>User</p>
                              </a>
                          </li>
                      </ul>
