@@ -73,7 +73,7 @@ Use the `BLANK_README.md` to get started.
 ### Built With
 
 
-### RUN APK
+### Run Apk
 
 * Node.js
   ```sh
