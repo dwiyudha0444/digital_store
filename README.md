@@ -87,36 +87,29 @@ Use the `BLANK_README.md` to get started.
 
 ### Installation
 
-1. Copy file .env.example ubahke .env
-   
- ```bash
-cp .env.example .env
-  ```
-2. dsd
-
-composer install
-
-3. df
-
-
- ```bash
-php artisan key:generate
+  * Salin file .env.example dan ubah namanya menjadi .env
+  ```sh
+ cp .env.example .env
   ```
 
-4. dsd
+  * Instal Dependensi
+  ```sh
+  composer install
+  ```
+
+  * Generate Key Aplikasi
+  ```sh
+  php artisan key:generate
+  ```
+
+ * Atur Konfigurasi Database pada env
+
+
+* Jalankan Migrasi Database
+  ```sh
+  php artisan migrate
+  ```
    
-   php artisan migrate
-
-5. ds
-
-php artisan migrate
-
-
-6. 
-7. sd
-
-8. 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
