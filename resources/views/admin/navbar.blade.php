@@ -16,9 +16,6 @@
           <li class="nav-item d-none d-sm-inline-block">
             <a href="{{ url('/home')}}" class="nav-link">Home</a>
           </li>
-          <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Contact</a>
-          </li>
         </ul>
     
         <!-- Right navbar links -->
@@ -45,7 +42,7 @@
             </div>
           </li>
     
-          <!-- Messages Dropdown Menu -->
+          {{-- <!-- Messages Dropdown Menu -->
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
               <i class="far fa-comments"></i>
@@ -102,8 +99,8 @@
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
             </div>
-          </li>
-          <!-- Notifications Dropdown Menu -->
+          </li> --}}
+          {{-- <!-- Notifications Dropdown Menu -->
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
               <i class="far fa-bell"></i>
@@ -129,7 +126,7 @@
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
-          </li>
+          </li> --}}
           <li class="nav-item">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button">
               <i class="fas fa-expand-arrows-alt"></i>

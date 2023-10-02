@@ -10,6 +10,7 @@ use App\Http\Controllers\client\ContactController;
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\AdminOrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,7 @@ Route::get('form-order/{id}',[OrderFormController::class,'edit'])->middleware('a
 //admin
 Route::resource('/dashboard',DashboardController::class)->middleware(['auth']);
 Route::resource('/product',ProductController::class)->middleware(['auth']);
+Route::resource('/taborder',AdminOrderController::class)->middleware(['auth']);
 //admin-edit
 Route::get('product-edit/{id}',[ProductController::class,'edit'])->middleware(['auth']);
 

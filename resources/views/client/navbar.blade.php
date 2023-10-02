@@ -75,7 +75,7 @@
                       <ul class="main-menu d-flex align-items-center">
                           <li><a class="active" href="{{ url('/home')}}">Home</a></li>
                           <li><a class="active" href="{{ url('/shop')}}">Shop</a></li>
-                          <li>
+                          {{-- <li>
                               <a class="active" href="javascript:void(0)">Category
                                   <svg xmlns="http://www.w3.org/2000/svg" width="9.98" height="5.69"
                                       viewBox="0 0 9.98 5.69">
@@ -93,7 +93,7 @@
                                   <li><a href="javascript:void(0)">Category 4</a></li>
                                   <li><a href="javascript:void(0)">Category 5</a></li>
                               </ul>
-                          </li>
+                          </li> --}}
                           <li><a class="active" href="{{ url('/contact') }}">Kontak</a></li>
                       </ul>
                       <div class="search-bar">

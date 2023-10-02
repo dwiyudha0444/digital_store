@@ -164,7 +164,7 @@
                     ID: #111-{{ $order->id }}
                 </small>
             </h1>
-            <div class="page-tools">
+            {{-- <div class="page-tools">
                 <div class="action-buttons">
                     <a class="btn bg-white btn-light mx-1px text-95" href="#" data-title="Print">
                         <i class="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
@@ -175,7 +175,7 @@
                         Export
                     </a>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="container px-0">
             <div class="row mt-4">
@@ -238,15 +238,15 @@
                                 <div class="d-none d-sm-block col-1">1</div>
                                 <div class="col-9 col-sm-5">{{ $order->nama_product }}</div>
                                 <div class="d-none d-sm-block col-2">{{ $order->qty }}</div>
-                                <div class="d-none d-sm-block col-2 text-95">$10</div>
-                                <div class="col-2 text-secondary-d2">$20</div>
+                                <div class="d-none d-sm-block col-2 text-95">Rp.{{ $order->harga }}</div>
+                                <div class="col-2 text-secondary-d2">Rp.{{ $order->total_harga }}</div>
                             </div>
 
                         </div>
                         <div class="row border-b-2 brc-default-l2"></div>
 
 
-                        <div class="row mt-3">
+                        {{-- <div class="row mt-3">
                             <div class="col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0">
                                 Extra note such as company or payment information...
                             </div>
@@ -276,7 +276,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                         <hr />
                         <div>
                             <span class="text-secondary-d1 text-105">Thank you for your business</span>
