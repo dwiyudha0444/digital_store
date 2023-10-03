@@ -65,7 +65,7 @@
                         <div class="product-item-image">
                             <a href="{{ route('shop.show',$pro->id) }}"><img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" alt="Product Name"
                                     class="img-fluid"></a>
-                            <div class="cart-icon">
+                            {{-- <div class="cart-icon">
                                 <a href="#"><i class="far fa-heart"></i></a>
                                 <a href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16.75" height="16.75"
@@ -89,11 +89,12 @@
                                         </g>
                                     </svg>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="product-item-info">
-                            <a href="product-details.html">BERRY TYPE-II: C1N Backpack</a>
-                            <span>$975</span> <del>$999</del>
+                            <a href="product-details.html">{{ $pro->name }}</a>
+                            <a href="product-details.html">{{ $pro->jenis }}</a>
+                            <span>Rp.{{ $pro->harga }}</span> 
                         </div>
                     </div>
                     @endforeach
@@ -190,7 +191,7 @@
                         <div class="product-item-image">
                             <a href="{{ route('shop.show',$pro->id) }}"><img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" alt="Product Name"
                                     class="img-fluid"></a>
-                            <div class="cart-icon">
+                            {{-- <div class="cart-icon">
                                 <a href="#"><i class="far fa-heart"></i></a>
                                 <a href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16.75" height="16.75"
@@ -198,12 +199,12 @@
                                         <!-- ... SVG code ... -->
                                     </svg>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="product-item-info">
                             <a href="product-details.html">{{ $pro->name }}</a>
                             <a href="product-details.html">{{ $pro->jenis }}</a>
-                            <span>Rp.{{ $pro->harga }}</span> <del>$999</del>
+                            <span>Rp.{{ $pro->harga }}</span> 
                         </div>
                     </div>
                 </div>

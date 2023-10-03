@@ -91,7 +91,7 @@
                         <div class="product-item-image">
                             <a href="{{ route('shop.show',$pro->id) }}"><img src="{{ url('admin/foto/product') }}/{{ $pro->foto }}" alt="Product Name"
                                     class="img-fluid"></a>
-                            <div class="cart-icon">
+                            {{-- <div class="cart-icon">
                                 <a href="#"><i class="far fa-heart"></i></a>
                                 <a href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16.75" height="16.75"
@@ -99,7 +99,7 @@
                                         <!-- ... SVG code ... -->
                                     </svg>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="product-item-info">
                             <a href="product-details.html">{{ $pro->name }}</a>

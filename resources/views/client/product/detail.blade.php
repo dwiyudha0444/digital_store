@@ -63,11 +63,7 @@
                                 </ul>
                             </div> --}}
                         </div>
-                        <p>Disposable Face Masks: 3-Layers Protection, the inner layer is a soft non-woven fabric,
-                            which can absorb the moisture from the breath of the wearer. The middle layer is a
-                            melt-blown polypropylene filtration layer for better filter out the particles in the
-                            air. The outer layer is a water-resistant layer which can block the splashing liquid in
-                            the air.</p>
+                        <p>{{ $pro->keterangan }}</p>
                         <div class="product-pricelist-selector">
                             {{-- <div class="product-pricelist-selector-size">
                                 <h6>Sizes</h6>
